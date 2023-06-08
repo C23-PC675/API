@@ -15,6 +15,9 @@ const Cats = db.define("cats", {
 	cat_desc: {
 		type: DataTypes.TEXT,
 	},
+	cat_care: {
+		type: DataTypes.TEXT,
+	},
 });
 
 export default Cats;
