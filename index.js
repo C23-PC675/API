@@ -1,11 +1,10 @@
 import express from "express";
-import usersRoute from "./routes/UsersRoute.js";
+import db from "./config/Database.js";
 import catsRoute from "./routes/CatsRoute.js";
 
-const port = 3000;
+const port = 3080;
 const app = express();
 
-app.use(usersRoute);
 app.use(catsRoute);
 
 app.use("/", (req, res) => {

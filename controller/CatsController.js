@@ -2,7 +2,7 @@ import Cats from "../models/CatsModel.js";
 
 export const getCats = async (req, res) => {
 	try {
-		let response = await Rooms.findAll();
+		let response = await Cats.findAll();
 		if (!response) return res.status(404).json({ msg: "Data Not Found!" });
 		res.status(200).json(response);
 	} catch (error) {

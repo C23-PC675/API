@@ -1,8 +1,9 @@
 import express from "express";
-import { getCatByID } from "../controller/CatsController.js";
+import { getCats, getCatByID } from "../controller/CatsController.js";
 
 const catsRoute = express.Router();
 
-catsRoute.post("/cat", getCatByID);
+catsRoute.get("/cats", getCats);
+catsRoute.get("/catid/:id_cat", getCatByID);
 
 export default catsRoute;
